@@ -1,0 +1,17 @@
+/bower_components/
+/node_modules/
+/.pulp-cache/
+/output/
+/generated-docs/
+/.psc-package/
+/.psc*
+/.purs*
+/.psa*
+/.spago
+/.spago2nix
+/.vscode
+/dce-output
+/dist
+.env
+/result
+/**/.DS_Store

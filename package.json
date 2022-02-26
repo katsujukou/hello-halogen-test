@@ -1,0 +1,22 @@
+{
+  "name": "hello-chromeless-test",
+  "version": "1.0.0",
+  "description": "A helloworld project to test halogen app with chromeless",
+  "main": "index.js",
+  "scripts": {
+    "nix:purs": "spago2nix generate 100 && mv spago-packages.nix ./nix/",
+    "nix:node": "node2nix --pkg-name nodejs-16_x -l package-lock.json -e nix/node-env.nix -o nix/node-packages.nix -c nix/node-composit.nix",
+    "nix": "npm run nix:purs && npm run nix:node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@craftamap/esbuild-plugin-html": "^0.3.0",
+    "dayjs": "^1.10.7",
+    "dotenv": "^16.0.0",
+    "esbuild": "^0.14.23",
+    "esbuild-sass-plugin": "^2.2.4"
+  }
+}
